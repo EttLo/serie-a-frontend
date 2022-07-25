@@ -1,22 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
+import { useState } from 'react';
+import PlayerDetail from './PlayerDetail';
 
 function App() {
+  const [player, setPlayer] = useState([]);
+
+  const getPlayersByTeamName = () => {
+    axios.get("http://localhost:8080/api/player?teamName=INTER")
+      .then(res => setPlayer(res.data));
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <button onClick={getPlayersByTeamName}>Get player data</button>
+        {
+          player.map(p => { /* editionDetail(e)*/
+            return (
+              <PlayerDetail key={p.id} player={p} />
+            );
+          })
+        }
       </header>
     </div>
   );
