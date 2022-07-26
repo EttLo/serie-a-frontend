@@ -49,9 +49,7 @@
 }
 
 .sectionColumn button:hover {
-  background-color: black;
-  color: white;
-  border: 1px solid white;
+  background-color: white;
 }
 
 .grid-item {
@@ -65,8 +63,6 @@
 }
 
 .grid-item:hover {
-  background-color: black;
-  color: white;
-  border: 1px solid white;
+  background-color: white;
 
 }
