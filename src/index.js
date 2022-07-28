@@ -3,11 +3,32 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Teams from './Teams';
+import Team from './Team';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route path="teams" element={<Teams />}>
+            <Route path=":teamId" element={<Team />} />
+          </Route>
+          <Route path="player" element={<App />}>
+            <Route path=":playerName" element={<App />} />
+          </Route>
+        </Route>
+      </Routes>
+    </BrowserRouter>
+
+
   </React.StrictMode>
 );
 

@@ -2,9 +2,87 @@
   text-align: center;
   position: relative;
   background-image: url("./img/sfondoSerieA.jpg");
-  background-position: center;
-  background-size: cover;
+  background-position: top;
+  background-size: auto;
 }
+
+.logo {
+  height: 30px;
+}
+
+.NavBar {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 30;
+}
+
+.bodyData {
+  display: flex;
+}
+
+.verticalMenu {
+  display: block;
+  float: left;
+  background-color: rgba(255, 255, 255, 0.2);
+  list-style-type: none;
+  font-weight: bold;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.showDataBox {
+  display: flex;
+}
+
+.teamInfo {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: black;
+  border: 1px solid black;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sectionColumn {
+  margin: 10px;
+}
+
+.sectionColumn button {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+}
+
+.sectionColumn button:hover {
+  background-color: white;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: black;
+  border: 1px solid black;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.grid-item:hover {
+  background-color: white;
+
+}
+
+
+
+
 
 .App-logo {
   height: 40vmin;
@@ -19,10 +97,6 @@
 
 .App-header {
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
@@ -37,32 +111,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.sectionColumn {
-  margin: 10px;
-}
-
-.sectionColumn button {
-  background-color: rgba(255, 255, 255, 0.5);
-  font-weight: bold;
-}
-
-.sectionColumn button:hover {
-  background-color: white;
-}
-
-.grid-item {
-  background-color: rgba(255, 255, 255, 0.5);
-  color: black;
-  border: 1px solid black;
-  padding: 14px;
-  font-size: 15px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.grid-item:hover {
-  background-color: white;
-
 }
