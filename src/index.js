@@ -10,6 +10,9 @@ import {
 } from "react-router-dom";
 import Teams from './Teams';
 import Team from './Team';
+import TeamPlayers from './TeamPlayers';
+import Players from './Players';
+import SearchPlayers from './SearchPlayers';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -19,10 +22,12 @@ root.render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route path="teams" element={<Teams />}>
-            <Route path=":teamId" element={<Team />} />
+            <Route path=":teamId" element={<Team />} >
+              <Route path="players" element={<TeamPlayers />} />
+            </Route>
           </Route>
-          <Route path="player" element={<App />}>
-            <Route path=":playerName" element={<App />} />
+          <Route path="player" element={<Players />}>
+            <Route path="playersearch" element={<SearchPlayers />} />
           </Route>
         </Route>
       </Routes>

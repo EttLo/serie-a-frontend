@@ -5,17 +5,17 @@ import logoSerieA from './img/logoSerieA.png'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <div>
         <nav className='NavBar'>
-          <img className='logo' src={logoSerieA} alt='logo A' /> {" | "}
-          <Link to="/teams">Teams</Link>{" | "}
+          <img id='logo' src={logoSerieA} alt='logo A' />
+          <Link to="/teams">Teams</Link>
           <Link to="/player">Players</Link>
         </nav>
 
-        <body className='bodyData'>
+        <div className='bodyData'>
           <Outlet />
-        </body>
-      </header>
+        </div>
+      </div>
     </div>
   );
 }

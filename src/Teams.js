@@ -15,9 +15,10 @@ function Teams() {
     return (
         <div>
             <section className='verticalMenu'>
+                <h2>All teams</h2>
                 {
                     teams.map((team) => (
-                        <div>
+                        <div key={team.id}>
                             <NavLink to={`/teams/${team.id}`}
                                 key={team.id}
                                 style={({ isActive }) => ({
