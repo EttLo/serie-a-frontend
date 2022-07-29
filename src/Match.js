@@ -3,7 +3,7 @@ import { Link, Outlet } from 'react-router-dom';
 import searchIcon from './img/searchIcon.png'
 
 
-function Players() {
+function Match() {
     const [input, setInput] = useState([]);
     const [query, setQuery] = useState([]);
     useEffect(() => {
@@ -15,17 +15,24 @@ function Players() {
             <section className='verticalMenu'>
                 <h2>Search By</h2>
                 <div>
-                    <button onClick={() => { setInput("nGoals") }}>Goals Scored</button>
+                    <button onClick={() => { setInput("matchDate") }} id="btn">Date</button>
                 </div>
                 <div>
-                    <button onClick={() => { setInput("surname") }}>Surname</button>
+                    <button onClick={() => { setInput("teamName") }} id="btn">Team</button>
                 </div>
                 <div>
-                    <button onClick={() => { setInput("position") }}>Position</button>
+                    <button onClick={() => { setInput("homeTeamName") }} id="btn">Home team</button>
                 </div>
                 <div>
-                    <button onClick={() => { setInput("year") }}>Year</button>
+                    <button onClick={() => { setInput("awayTeamName") }} id="btn">Away team</button>
                 </div>
+                <div>
+                    <button onClick={() => { setInput("goals") }} id="btn">Goals</button>
+                </div>
+                <div>
+                    <button onClick={() => { setInput("year") }} id="btn">Championship year</button>
+                </div>
+
             </section>
             <section className='showDataBox'>
                 <div className='showDataBox'>
@@ -33,7 +40,7 @@ function Players() {
                         <article className="teamInfo">
                             <input type={"text"} placeholder={`Search by: ${input}`} id="search"
                                 onChange={(event) => setQuery(event.target.value)} />
-                            <Link to="/player/playersearch" state={[input, query]}>
+                            <Link to="/match/matchsearch" state={[input, query]}>
                                 {<img className="searchIcon" src={searchIcon} alt="=>" />}
                             </Link>
                         </article>
@@ -47,4 +54,4 @@ function Players() {
     )
 }
 
-export default Players;
+export default Match;

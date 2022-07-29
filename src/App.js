@@ -7,9 +7,10 @@ function App() {
     <div className="App">
       <div>
         <nav className='NavBar'>
-          <img id='logo' src={logoSerieA} alt='logo A' />
-          <Link to="/teams">Teams</Link>
-          <Link to="/player">Players</Link>
+          <Link to="/">{<img id='logo' src={logoSerieA} alt='logo A' />}</Link>
+          <Link to="/teams" className='navLink'>Teams</Link>
+          <Link to="/player" className='navLink'>Players</Link>
+          <Link to="/match" className='navLink'>Games</Link>
         </nav>
 
         <div className='bodyData'>

@@ -23,7 +23,7 @@
   max-height: 10vh;
 }
 
-.NavBar a {
+.NavBar .navLink {
   position: relative;
   margin-top: 2.5vh;
   margin-left: 2vw;
@@ -37,8 +37,9 @@ a {
 
 .bodyData {
   display: flex;
-  max-width: 100vw;
-  min-width: 100vw;
+  max-width: 90vw;
+  min-width: 90vw;
+  min-height: 90vh;
 }
 
 .verticalMenu {
@@ -47,9 +48,9 @@ a {
   background-color: rgba(255, 255, 255, 0.2);
   list-style-type: none;
   font-weight: bold;
-  min-height: 100vh;
-  min-width: 10vw;
-  max-width: 10vw;
+  min-height: 90vh;
+  min-width: 15vw;
+  max-width: 15vw;
   border-right: 1px solid black;
   border-collapse: collapse;
 }
@@ -73,6 +74,7 @@ a {
 }
 
 .teamInfo {
+  display: block;
   width: 20vw;
   background-color: rgba(255, 255, 255, 0.2);
   color: black;
@@ -88,15 +90,24 @@ a {
 
 .playersInfo {
   width: 20vw;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.5);
   color: black;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
   border-collapse: collapse;
-  padding: 14px;
   font-size: 15px;
   font-weight: bold;
   text-align: center;
+}
+
+#search {
+  width: 15vw;
+  font-size: 20px;
+}
+
+.searchIcon {
+  position: absolute;
+  height: 3.5vh;
 }
 
 .sectionColumn {
@@ -112,19 +123,18 @@ a {
   background-color: white;
 }
 
-.grid-item {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: black;
-  border: 1px solid black;
-  padding: 14px;
-  font-size: 15px;
-  font-weight: bold;
-  text-align: center;
+.grid-container {
+  margin-left: 1.6vw;
+  width: 60vw;
+  max-height: 90vh;
+  display: grid;
+  grid-template-rows: 0.5fr 0.5fr 1.5fr 1.5fr 0.5fr;
+  grid-template-columns: 20vw 20vw 20vw;
 }
+
 
 .grid-item:hover {
   background-color: white;
-
 }
 
 /* ------------------------------------------------------------------------------- */

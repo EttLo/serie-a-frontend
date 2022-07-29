@@ -17,13 +17,22 @@ function Team() {
         <div className='showDataBox'>
             <section>
                 <article className="teamInfo">
-                    <h2>Team name: {team.name}</h2>
+                    <h2>{team.name}</h2>
                     <p>City: {team.city}</p>
                     <p>Coach: {team.coachSurname}</p>
-                    <NavLink to={`/teams/${team.id}/players`} state={team.name} key={team.id}
-                        style={({ isActive }) => ({
-                            color: isActive ? "white" : ""
-                        })}>Players</NavLink>
+                    <p>
+                        <NavLink to={`/teams/${team.id}/playersearch`} state={["teamName", team.name]}
+                            style={({ isActive }) => ({
+                                color: isActive ? "white" : ""
+                            })}>Players</NavLink>
+                    </p>
+                    <p>
+                        <NavLink to={`/teams/${team.id}/matchsearch`} state={["teamName", team.name]}
+                            style={({ isActive }) => ({
+                                color: isActive ? "white" : ""
+                            })}>Games</NavLink>
+                    </p>
+
                 </article>
             </section>
             <section>
